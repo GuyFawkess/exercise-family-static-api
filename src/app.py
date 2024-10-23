@@ -58,7 +58,7 @@ def get_all_members():
 @app.route('/member/<int:id>', methods=['GET'])
 def get_single_member(id):
     member = jackson_family.get_member(id)
-    return member
+    return jsonify(member)
 
 @app.route('/member', methods=['POST'])
 def create_member():
